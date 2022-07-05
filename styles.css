@@ -1,0 +1,104 @@
+:root {
+    --white: #ffffff;
+    --soft-grey: #fafafa;
+    --dark-grey: #efefef;
+    --borders-grey: #dbdbdb;
+    --font-color-black: #262626;
+    --font-color-grey: #8e8e8e;
+    --font-family-system: 'Roboto Flex', sans-serif;
+    --extraLight: 200;
+    --light: 300;
+    --regular: 400;
+    --semi-bold: 500;
+    --bold: 600;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: var(--font-family-system);
+}
+.grid-container {
+    width: 1190px;
+    display: grid;
+    place-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    display: grid;
+    justify-content: center;
+    border-bottom: 1px solid var(--borders-grey);
+    background-color: var(--white);
+}
+.header-container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8%;
+    align-items: center;
+}
+.header-logo-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    justify-content: flex-start;
+}
+.header-logo-container a {
+    width: 100%;
+    display: inline-block;
+}
+.header-logo-container img {
+    width: 100%;
+    min-width: 105px;
+    max-width: 135px;
+}
+.header-finder-container {
+    width: 100%;
+    height: 45px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--dark-grey);
+}
+.header-finder-container img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+.header-finder-container input {
+    width: 80%;
+    color: var(--font-color-grey);
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: 'Roboto Flex', sans-serif;
+    border: none;
+    background-color: var(--dark-grey);
+}
+.header-finder-container input:focus-visible {
+    border: none;
+    outline: none;
+}
+.header-nav-container .nav-ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.header-nav-container .nav-item img {
+    width: 32px;
+    height: 32px;
+}
+.profile-pic__cut {
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    outline: 2px solid var(--font-color-black);
+}
