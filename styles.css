@@ -20,9 +20,9 @@
 html {
     font-size: 62.5%;
     font-family: var(--font-family-system);
+    background-color: var(--soft-grey);
 }
 .grid-container-header{
-    width: 1190px;
     max-width: 1190px;
     display: grid;
     place-content: center;
@@ -36,7 +36,7 @@ html {
 header {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 75px;
     display: grid;
     justify-content: center;
@@ -45,6 +45,7 @@ header {
     z-index: 1;
 }
 .header-container {
+    width: 100vw;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 8%;
     align-items: center;
@@ -112,13 +113,13 @@ header {
 
 main {
     width: 100%;
+    margin-bottom: 40px;
     background-color: var(--soft-grey);
     display: grid;
 }
 
 .profile-container {
     width: 100%;
-    /* height: calc(100vh - 75px); */
     margin-top: 100px;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 5fr 4fr;
@@ -227,7 +228,6 @@ main {
 
 .post-container{
     width: 100%;
-
     justify-self: center;
 }
 .post-nav {
@@ -312,5 +312,25 @@ main {
 }
 
 footer {
-    height: 100px;
+    width: 100%;
+    min-height: 130px;
+    display: grid;
+    justify-content: center;
+    background-color: var(--soft-grey);
+}
+.links-container {
+    padding: 0 40px;
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.links-container a {
+    margin-right: 15px;
+    display: inline-block;
+    color: var(--font-color-grey);
+    font-size: 1.5rem;
+    font-family: var(--font-family-system);
+    font-weight: var(--light);
+    text-decoration: none;
 }
